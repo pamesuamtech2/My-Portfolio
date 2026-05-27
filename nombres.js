@@ -14,9 +14,9 @@ Description: "WhoIAm, I am a passionate..."
 LinkProjects2: "projects.html"
 
 MySkills:
-Skill-HTML: "./assets/free-html-3d-icon-png-download-3640299.webp"
-Skill-CSS: "./assets/png-clipart-blue-and-white-logo-web-development-responsive-web-design-cascading-style-sheets-html-css-blue-angle-thumbnail-removebg-preview.png"
-Skill-JS: "./assets/javascript-logo-javascript-icon-transparent-free-png.webp"
+SkillHTML: "./assets/free-html-3d-icon-png-download-3640299.webp"
+SkillCSS: "./assets/png-clipart-blue-and-white-logo-web-development-responsive-web-design-cascading-style-sheets-html-css-blue-angle-thumbnail-removebg-preview.png"
+SkillJS: "./assets/javascript-logo-javascript-icon-transparent-free-png.webp"
 
 LinkResume: "resume.pdf"
 
