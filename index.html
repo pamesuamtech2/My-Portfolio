@@ -1,33 +1,44 @@
-</head>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Home - Portafolio de Pam</title>
   
   <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  <script type="module" src="./nombres.js"></script>
+   <script type="module" src="./tailwind.config.js"></script>
+   <style type="text/tailwindcss">
+
+  @import "tailwindcss";
+
+    @custom-variant dark (&:where(.dark, .dark *));</style>
 </head>
 
-<body class="text-white font-sans">
+<body <body class="text-white font-sans">
+  <div class="bg-linear-to-b from-[#0D1117] to-blue-900 min-h-screen flex flex-col dark:bg-none dark:bg-amber-100">
 
-  <div class="bg-linear-to-b from-[#0D1117] to-blue-900 min-h-screen flex flex-col">
     
     <header class="w-full">
   
   <nav class="flex justify-between items-center w-full max-w-6xl mx-auto p-6">
-    
     <div class="flex gap-6">
-      <a href="aboutme.html" class="hover:text-indigo-300 text-sm tracking-widest uppercase">About Me</a>
-      <a href="projects.html" class="hover:text-indigo-300 text-sm tracking-widest uppercase">Projects</a>
-      <a href="skills.html" class="hover:text-indigo-300 text-sm tracking-widest uppercase">Skills</a>
-    </div>
+      <button id="btnDarkMode" class="text-2xl cursor-pointer hover:scale-125 transition-transform duration-300">
+  💡</button>
+      <a href="aboutme.html" class="hover:text-indigo-300 dark:text-black font-bold dark:hover:text-emerald-950
+      text-sm tracking-widest uppercase">About Me</a>
+      <a href="projects.html" class="hover:text-indigo-300  dark:text-black font-bold dark:hover:text-emerald-950
+      text-sm tracking-widest uppercase">Projects</a>
+      <a href="skills.html" class="hover:text-indigo-300  dark:text-black font-bold dark:hover:text-emerald-950
+      text-sm tracking-widest uppercase">Skills</a>
+    
 
-    <a href="contact.html" class="group flex items-center gap-3 border border-gray-500 rounded-full pl-5 pr-1.5 py-1.5 text-xs font-bold text-white uppercase">
+    <a href="contact.html" class="group flex items-center gap-3 border absolute right-6
+    border-gray-500 rounded-full pl-5 pr-1.5 py-1.5 text-xs font-bold text-white uppercase dark:text-black dark:border-red-900">
   
   CONTACT
   
-  <span class="bg-yellow-400 text-black rounded-full w-8 h-8 flex justify-center items-center group-hover:scale-110 transition-all">
+  <span class="bg-yellow-400 text-black dark:bg-red-900 dark:text-white rounded-full w-8 h-8 flex justify-center items-center group-hover:scale-110 transition-all">
     
     <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M17 7L7 17M8 7h9v9" />
@@ -43,8 +54,9 @@
     <main class="grow flex flex-col items-center justify-center">
       
       <section class="text-center">
-        <h1 class="text-2xl font-bold mb-4">Pamela Suárez</h1>
-        <p class="text-xl md:text-2xl text-indigo-200">Frontend Developer and Digital Artist</p>
+        <h1 class="text-4xl font-bold mb-4 dark:text-red-900 ">Pamela Suárez</h1>
+        <p class="text-xl md:text-2xl text-indigo-200 dark:text-black"
+         >Frontend Developer and Digital Artist</p>
         
         <div class="mt-10 flex flex-col items-center drop-shadow-xl relative">
           <img src="./assets/Sin título 142_202605080716_40540.png" 
@@ -53,59 +65,73 @@
        
          <a href="projects.html"
           class="absolute bottom-12
-          bg-yellow-200 text-slate-900 font-bold px-3 py-1 rounded-full shadow-lg transition"
+          bg-yellow-200
+           text-slate-900 dark:bg-emerald-950 dark:text-white
+           font-bold px-3 py-1 rounded-full shadow-lg transition hover:scale-110"
           >My Projects</a>
         </div>
-
         
       </section>
     
-      <section class="bg-[#0D1117] w-full 
+      <section class="bg-[#0D1117] dark:bg-white
+       w-full 
       flex flex-col justify-center items-center py-12 px-6">
-        <h2 class="font-extrabold text-2xl mb-4 text-yellow-200">
+        <h2 class="font-extrabold text-2xl mb-4 
+        text-yellow-200 dark:text-red-900">
           WHO AM I?</h2>
-        <p> I am a passionate frontend developer and digital 
+        <p class=" dark:text-black"> I am a passionate frontend developer and digital 
           artist who is always creating new experiences for the online world. </p>      
         <a href="projects.html"
-          class=" bg-amber-200 text-slate-900 
+          class=" 
+          bg-amber-200 text-slate-900  dark:bg-emerald-950 dark:text-white hover:scale-110
+
           font-bold px-2 py-1 rounded-full shadow-lg transition mb-2 mt-4"
           >Show My Projects</a>
         </section> 
 
-       <section class="bg-[#0D1117] w-full 
-      flex flex-col justify-center items-center px-6">
-          <h2 class="font-extrabold text-2xl text-yellow-200 
-          mb-4">
+       <section class="bg-[#0D1117] 
+        w-full flex flex-col justify-center items-center px-6 dark:bg-stone-200">
+          <h2 class="font-extrabold text-2xl 
+          text-yellow-200 dark:text-cyan-950
+          mb-4 mt-3">
           MY SKILLS</h2>
-<div class="grid grid-cols-2 md:grid-cols-4 gap-4 w-full max-w-5xl">
+<div id="mainSkills" class="grid grid-cols-2 md:grid-cols-4 gap-4 w-full max-w-5xl">
 
               <!-- SKILL 1: HTML -->
-    <div class="bg-[#1E293B] rounded-xl p-6 flex justify-center items-center hover:scale-105 transition duration-300 shadow-lg">
+    <div class="bg-[#1E293B] dark:bg-[#a35b31]
+    rounded-xl p-6 flex justify-center items-center hover:scale-105 transition duration-300 shadow-lg">
       <img src="./assets/free-html-3d-icon-png-download-3640299.webp" alt="HTML5" class="w-16 h-16">
     </div>
     
     <!-- SKILL 2: CSS -->
-    <div class="bg-[#1E293B] rounded-xl p-6 flex justify-center items-center hover:scale-105 transition duration-300 shadow-lg">
+    <div class="bg-[#1E293B] dark:bg-[#a35b31]
+    rounded-xl p-6 flex justify-center items-center hover:scale-105 transition duration-300 shadow-lg">
       <img src="./assets/png-clipart-blue-and-white-logo-web-development-responsive-web-design-cascading-style-sheets-html-css-blue-angle-thumbnail-removebg-preview.png" alt="CSS3" class="w-16 h-16">
     </div>
 
     <!-- SKILL 3: JAVASCRIPT -->
-     <div class="bg-[#1E293B] rounded-xl p-6 flex flex-col justify-center items-center hover:scale-105 transition duration-300 shadow-lg">      
+     <div class="bg-[#1E293B]  dark:bg-[#a35b31]
+     rounded-xl p-6 flex flex-col justify-center items-center hover:scale-105 transition duration-300 shadow-lg">      
       <img src="./assets/javascript-logo-javascript-icon-transparent-free-png.webp" alt="JavaScript" class="w-16 h-16">
     </div>
       
-      <div class="bg-[#1E293B] rounded-xl p-6 flex flex-col justify-center items-center shadow-lg text-center hover:scale-105 transition duration-300">
-    <span class="text-slate-300 text-sm mb-4 font-medium">Find my resume here</span>
-    <a href="resume.pdf" target="_blank" class="bg-[#e3ff6a] text-slate-900 font-bold px-4 py-2 rounded-full text-xs hover:bg-yellow-300 transition w-full">
+      
+       <div class="bg-[#1E293B] dark:bg-[#a35b31]
+       rounded-xl p-6 flex flex-col justify-center items-center shadow-lg text-center hover:scale-105 transition duration-300">
+    <span class="text-slate-300 dark:text-black text-sm mb-4 font-medium dark:font-bold">Find my resume here</span>
+    <a href="resume.pdf" target="_blank" 
+    class="bg-[#e3ff6a]
+     text-slate-900 font-bold px-4 py-2 rounded-full text-xs
+      hover:bg-yellow-300 dark:bg-white dark:text-orange-700 transition w-full">
       RESUME
     </a>
   </div>
 </div>
-     <section class="bg-[#0D1117] w-full flex flex-col justify-center items-center px-6">
+     <section class="bg-[#0D1117] dark:bg-stone-300 w-full flex flex-col justify-center items-center px-6">
 
-        <div class="bg-[#1E293B] rounded-xl p-8 md:p-10 flex flex-col justify-center items-center shadow-lg w-full max-w-2xl mx-auto mt-20">      
+        <div class="bg-[#1E293B] dark:bg-[#c4b817] rounded-xl p-8 md:p-10 flex flex-col justify-center items-center shadow-lg w-full max-w-2xl mx-auto mt-20">      
           
-          <h2 class="font-extrabold text-xl text-yellow-200 mb-8 tracking-widest uppercase">
+          <h2 class="font-extrabold text-xl text-yellow-200 dark:text-red-900 mb-8 tracking-widest uppercase">
             ADDITIONAL SKILLS
           </h2>
 
@@ -119,17 +145,20 @@
         </div> </section>
         
       <!-- Sección con más fotos-->
-<section class="bg-[#0D1117] w-full">
+<section class="bg-[#0D1117] w-full dark:bg-stone-300 ">
   
   <div class="max-w-5xl mx-auto w-full p-4 md:p-10 grid grid-cols-5 gap-2 md:gap-8 items-center">
 
     <div class="col-span-2 flex flex-col items-start text-left relative z-10">
       
-      <h2 class="font-extrabold text-sm md:text-4xl text-white mb-4 md:mb-8 leading-tight">
+      <h2 class="font-extrabold text-sm md:text-4xl 
+      text-white mb-4 md:mb-8 leading-tight dark:text-cyan-950">
         THE WORKS <br> CLOSEST TO <br> MY HEART
       </h2>
             
-      <a href="projects.html" class="bg-[#E3FF6A] text-slate-900 font-bold px-3 py-2 md:px-6 md:py-3 text-[10px] md:text-base rounded-full hover:bg-yellow-300 transition shadow-xl relative z-10 translate-x-6 md:translate-x-12 w-fit whitespace-nowrap">
+      <a href="projects.html" class="bg-[#E3FF6A] dark:bg-emerald-950 dark:text-white dark:hover:scale-110 dark:hover:bg-emerald-950
+      text-slate-900 font-bold px-3 py-2 md:px-6 md:py-3 text-[10px] md:text-base rounded-full
+       hover:bg-yellow-300 transition shadow-xl relative z-10 translate-x-6 md:translate-x-12 w-fit whitespace-nowrap">
         SHOW MY PROJECTS
       </a>
       
@@ -151,11 +180,13 @@
 
     </div> </section>
 
-<section class="bg-[#0D1117] w-full py-20 px-6 flex flex-col justify-center items-center">
+<section class="bg-[#0D1117] dark:bg-stone-300
+w-full py-20 px-6 flex flex-col justify-center items-center">
 
-  <div class="bg-white rounded-3xl p-8 md:p-12 w-full max-w-2xl mx-auto shadow-2xl">
+  <div class="bg-white dark:border-emerald-950 dark:bg-emerald-950
+  rounded-3xl p-8 md:p-12 w-full max-w-2xl mx-auto shadow-2xl">
     
-    <h2 class="font-extrabold text-3xl md:text-4xl text-slate-900 text-center mb-8">
+    <h2 class="font-extrabold text-3xl md:text-4xl text-slate-900  dark:text-red-900 dark:[-webkit-text-stroke:2px_white]  text-center mb-8">
       LET'S HAVE A CHAT
     </h2>
 
@@ -164,30 +195,50 @@
       <input 
         type="text" 
         placeholder="YOUR NAME" 
-        class="bg-gray-200 text-slate-800 placeholder-gray-500 text-xs md:text-sm font-semibold rounded-xl p-4 w-full focus:outline-none focus:ring-2 focus:ring-[#E3FF6A] transition"
+        class="bg-gray-200
+         text-slate-800
+         placeholder-gray-500 
+         text-xs md:text-sm font-semibold rounded-xl p-4 w-full focus:outline-none focus:ring-2 
+         focus:ring-[#E3FF6A] transition"
         required
       >
 
       <input 
         type="email" 
         placeholder="EMAIL ADDRESS" 
-        class="bg-gray-200 text-slate-800 placeholder-gray-500 text-xs md:text-sm font-semibold rounded-xl p-4 w-full focus:outline-none focus:ring-2 focus:ring-[#E3FF6A] transition"
+        class="
+        bg-gray-200
+         text-slate-800
+          placeholder-gray-500 
+          text-xs md:text-sm font-semibold rounded-xl p-4 w-full focus:outline-none focus:ring-2 
+          focus:ring-[#E3FF6A] transition"
         required
       >
 
       <textarea 
         placeholder="CHAT HERE" 
         rows="4" 
-        class="bg-gray-200 text-slate-800 placeholder-gray-500 text-xs md:text-sm font-semibold rounded-xl p-4 w-full resize-none focus:outline-none focus:ring-2 focus:ring-[#E3FF6A] transition"
+        class=
+        "bg-gray-200
+         text-slate-800
+          placeholder-gray-500 text-xs md:text-sm font-semibold rounded-xl p-4 w-full resize-none focus:outline-none focus:ring-2 
+          focus:ring-[#E3FF6A] transition"
         required
       ></textarea>
 
       <button 
         type="submit" 
-        class="bg-[#E3FF6A] text-slate-900 font-extrabold text-xs md:text-sm rounded-xl p-4 w-full hover:bg-yellow-300 transition shadow-md mt-2 tracking-widest"
+        class="
+        bg-[#E3FF6A]
+         text-slate-900 
+        font-extrabold text-xs md:text-sm rounded-xl p-4 w-full 
+        hover:bg-yellow-300 transition shadow-md mt-2 tracking-widest dark:hover:bg-[#c4b817] dark:bg-[#a35b31] dark:text-white"
+        
       >
         SUBMIT HERE
       </button>
+      
+  
 
     </form> </div> </section>
 
