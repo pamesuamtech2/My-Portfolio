@@ -3,17 +3,17 @@ const mainSkillsContainer = document.getElementById("mainSkills");
 const myMainSkills = [
   {
       id: 1,
-      picture: "./assets/free-html-3d-icon-png-download-3640299.webp",
+      picture: "./assets/htmllogo.webp",
       skillname: "HTML5" 
   },
   {
       id: 2,
-      picture: "./assets/png-clipart-blue-and-white-logo-web-development-responsive-web-design-cascading-style-sheets-html-css-blue-angle-thumbnail-removebg-preview.png",
+      picture: "./assets/css.png",
       skillname: "CSS3"   
   },
   {
       id: 3,
-      picture: "./assets/javascript-logo-javascript-icon-transparent-free-png.webp",
+      picture: "./assets/javascriptlogo.jpg",
       skillname: "JavaScript"   
   }
 ];
@@ -35,22 +35,22 @@ const addSkillsContainer = document.getElementById("addSkills");
 const myAddSkills = [
   {
       id: 4,
-      picture: "assets/WhatsApp Image 2026-05-09 at 6.11.17 PM.png",
-      skillname: "OpenScienceNASA" 
+      picture: "/assets/openScienceNasa.png",
+      skillname: "OpenScienceNASA", 
   },
   {
       id: 5,
-      picture: "assets/WhatsApp Image 2026-05-09 at 6.59.06 PM.png",
-      skillname: "EnglishC2"
+      picture: "/assets/englishC2.png",
+      skillname: "EnglishC2",
   },
   {
       id: 6,
-      picture:"assets/1778376452819.png",
-      skillname: "PromptEngeneering"   
+      picture:"/assets/1778376452819.png",
+      skillname: "PromptEngeneering",   
   },
    {
       id: 7,
-      picture: "assets/Illustrator-logo.png",
+      picture: "/assets/Illustrator-logo.png",
       skillname: "AdobeIllustrator"   
   }
 ];
@@ -58,8 +58,8 @@ const myAddSkills = [
 let addSkillsHTML = "";
 myAddSkills.forEach(function(skill) {
   addSkillsHTML += `
-      <div class="flex flex-row flex-wrap justify-center items-center gap-6 md:gap-8 w-full">
-          <img src="${skill.picture}" alt="${skill.skillname}" class="w-55 h-55">
-      </div>
+          <img src="${skill.picture}" alt="${skill.skillname}" class="w-30 h-30">
     `;
 });
+
+addSkillsContainer.innerHTML = addSkillsHTML;
